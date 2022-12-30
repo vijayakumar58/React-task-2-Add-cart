@@ -30,82 +30,82 @@ export class Carddata extends Component {
           button:"Add To Cart"
          },
          {
-          product:
-          productEnable:
-          image:
-          productname:
-          productnameEnable:
-          rating:
-          ratingEnable:
-          offerprice:
-          offerpriceEnable:
-          price:
-          button:
+          product:"sale",
+          productEnable:true,
+          image:"https://m.media-amazon.com/images/I/71Ye4QY493L._SX679_.jpg",
+          productname:"Male Puppets",
+          productnameEnable:true,
+          rating:"",
+          ratingEnable:false,
+          offerprice:"$50.00",
+          offerpriceEnable:true,
+          price:"$25.00",
+          button:"Add to cart"
          },
          {
-          product:
-          productEnable:
-          image:
-          productname:
-          productnameEnable:
-          rating:
-          ratingEnable:
-          offerprice:
-          offerpriceEnable:
-          price:
-          button:
+          product:"",
+          productEnable:false,
+          image:"https://m.media-amazon.com/images/I/413LMwScBjS._SX679_.jpg",
+          productname:"Wifi Booster",
+          productnameEnable:true,
+          rating:"",
+          ratingEnable:true,
+          offerprice:"",
+          offerpriceEnable:false,
+          price:"$40.00",
+          button:"Add to cart"
          },
          {
-          product:
-          productEnable:
-          image:
-          productname:
-          productnameEnable:
-          rating:
-          ratingEnable:
-          offerprice:
-          offerpriceEnable:
-          price:
-          button:
+          product:"sale",
+          productEnable:true,
+          image:"https://m.media-amazon.com/images/I/81wN5ep5CAL._SY879_.jpg",
+          productname:"JH Gallery Lotus Hangings for Decoration",
+          productnameEnable:true,
+          rating:"",
+          ratingEnable:true,
+          offerprice:"$50.00",
+          offerpriceEnable:true,
+          price:"$25.00",
+          button:"Add to cart"
          },
          {
-          product:
-          productEnable:
-          image:
-          productname:
-          productnameEnable:
-          rating:
-          ratingEnable:
-          offerprice:
-          offerpriceEnable:
-          price:
-          button:
+          product:"",
+          productEnable:true,
+          image:"https://m.media-amazon.com/images/I/71+FRIdP3pL._UL1500_.jpg",
+          productname:"Indian Traditional Kanjivaram Silk",
+          productnameEnable:true,
+          rating:"",
+          ratingEnable:true,
+          offerprice:"",
+          offerpriceEnable:false,
+          price:"$120.00-$280.00",
+          button:"View options"
          },
          {
-          product:
-          productEnable:
-          image:
-          productname:
-          productnameEnable:
-          rating:
-          ratingEnable:
-          offerprice:
-          offerpriceEnable:
-          price:
-          button:
+          product:"sale",
+          productEnable:true,
+          image:"https://m.media-amazon.com/images/I/61xlUgke8BL._UX679_.jpg",
+          productname:"Men's Beige Silk Blend Sherwani Set",
+          productnameEnable:true,
+          rating:"",
+          ratingEnable:true,
+          offerprice:"$20.00",
+          offerpriceEnable:true,
+          price:"$18.00",
+          button:"Add to cart",
          },
          {
-          product:
-          productEnable:
-          image:
-          productname:
-          productnameEnable:
-          rating:
-          ratingEnable:
-          offerprice:
-          offerpriceEnable:
-          price:
-          button:
+          product:"",
+          productEnable:false,
+          image:"https://m.media-amazon.com/images/I/616e2t492uL._SX679_.jpg",
+          productname:"Alpha Bluetooth Calling Smart Watch ",
+          productnameEnable:true,
+          rating:"",
+          ratingEnable:true,
+          offerprice:"",
+          offerpriceEnable:true,
+          price:"$40",
+          button:"Add to cart"
          }
     ]
     }
@@ -119,7 +119,7 @@ export class Carddata extends Component {
                 <Card card={data[2]}/> */}
                 {
                   data.map((e)=>{
-                    return <Card card={e}/>
+                    return <Cartcomponent Cartdata={e}/>
                   })
                 }
               </div>

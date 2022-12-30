@@ -1,5 +1,6 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Carddata from './Cartdata';
 
 function App() {
   return (
@@ -40,7 +41,9 @@ function App() {
                 </div>
             </div>
         </header>
-        
+        <Carddata>
+            
+        </Carddata>
         <footer className="py-5 bg-warning">
             <div className="container"><p className="m-0 text-center text-primary">Copyright &copy; OIP Website 2022</p></div>
         </footer>

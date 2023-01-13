@@ -1,40 +1,31 @@
-import { render } from "@testing-library/react";
-import React, { Component } from 'react';
+//import { render } from "@testing-library/react";
+import React from 'react'
 
-export class Cartcomponent extends Component{
-    // constructor(){
-    // super();
-    //  this.props ={
-    //             id:0,
-    //          }
-    //   }
-render(){
-
-    return(
-        <div className="col mb-5">
-        <div className="card h-100">
-        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">{this.props.data.product}</div>
-            <img className="card-img-top" src={this.props.data.image} alt="..." />
+function Cartcomponent(props) {
+    console.log(props)
+   return<div key={props.Cartcomponent.id} className="col mb-5">
+                <div className="card h-100">
+                <div className="badge bg-dark text-white position-absolute" style={{top: '0.5 rem', right: '0.5rem'}}>{props.Cartcomponent.product}</div>
+            <img className="card-img-top" src={props.Cartcomponent.image} alt="..." />
              <div className="card-body p-4">
                 <div className="text-center">
-                    <h5 className="fw-bolder">{this.props.data.productname}</h5>
-                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                    <h5 className="fw-bolder">{props.Cartcomponent.productname}</h5>
+                    <div className="d-flex justify-content-center small text-warning mb-2">
+                                        <div className="bi-star-fill"></div>
+                                        <div className="bi-star-fill"></div>
+                                        <div className="bi-star-fill"></div>
+                                        <div className="bi-star-fill"></div>
+                                        <div className="bi-star-fill"></div>
                                     </div>
-                    <span class="text-muted text-decoration-line-through">{this.props.data.offerprice}</span> 
-                    {this.props.data.price}
+                    <span className="text-muted text-decoration-line-through">{props.Cartcomponent.offerprice}</span> 
+                    {props.Cartcomponent.price}
                 </div>
             </div>
            <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">{this.props.data.button}</a></div>
+                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">{props.Cartcomponent.button}</a></div>
             </div>
         </div>
     </div>
-    )
-}
+            
 }
 export default Cartcomponent

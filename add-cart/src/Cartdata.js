@@ -1,11 +1,11 @@
-import { Component } from "react";
-import Cartcomponent from "./Cartcomponent";
+import React from 'react';
+import Cartcomponent from './Cartcomponent';
 
-export class Carddata extends Component {
-    constructor(){
-        super();
-    let data=[
+function Cartdata () {
+   
+   let data=[
         {
+         id:1,
          product:"",
          productEnable:false,
          image:"https://media.istockphoto.com/id/502129687/photo/decorative-cosmetics-for-makeup.jpg?s=1024x1024&w=is&k=20&c=wGmovDLR3scv2NWrha6VGUO82qn_cWwxBh1ljemwo-0=",
@@ -18,6 +18,7 @@ export class Carddata extends Component {
          button:"View Options"
         },
         {
+          id:2,
           product:"sale",
           productEnable:true,
           image:"https://m.media-amazon.com/images/I/71u3QxI3QvL._UY695_.jpg",
@@ -30,6 +31,7 @@ export class Carddata extends Component {
           button:"Add To Cart"
          },
          {
+          id:3,
           product:"sale",
           productEnable:true,
           image:"https://m.media-amazon.com/images/I/71Ye4QY493L._SX679_.jpg",
@@ -43,6 +45,7 @@ export class Carddata extends Component {
           button:"Add to cart"
          },
          {
+          id:4,
           product:"",
           productEnable:false,
           image:"https://m.media-amazon.com/images/I/413LMwScBjS._SX679_.jpg",
@@ -56,6 +59,7 @@ export class Carddata extends Component {
           button:"Add to cart"
          },
          {
+          id:5,
           product:"sale",
           productEnable:true,
           image:"https://m.media-amazon.com/images/I/81wN5ep5CAL._SY879_.jpg",
@@ -69,6 +73,7 @@ export class Carddata extends Component {
           button:"Add to cart"
          },
          {
+          id:6,
           product:"",
           productEnable:true,
           image:"https://m.media-amazon.com/images/I/71+FRIdP3pL._UL1500_.jpg",
@@ -82,6 +87,7 @@ export class Carddata extends Component {
           button:"View options"
          },
          {
+          id:7,
           product:"sale",
           productEnable:true,
           image:"https://m.media-amazon.com/images/I/61xlUgke8BL._UX679_.jpg",
@@ -95,6 +101,7 @@ export class Carddata extends Component {
           button:"Add to cart",
          },
          {
+          id:8,
           product:"",
           productEnable:false,
           image:"https://m.media-amazon.com/images/I/616e2t492uL._SX679_.jpg",
@@ -108,27 +115,15 @@ export class Carddata extends Component {
           button:"Add to cart"
          }
     ]
-    }
-    render (){
-        return(
-            <section className="py-5">
+        return<section className="py-5">
             <div className="container px-4 px-lg-5 mt-5">
               <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                {/* <Card card={data[0]}/>
-                <Card card={data[1]}/>
-                <Card card={data[2]}/> */}
-                {
-                  data.map((e)=>{
-                    return <Cartcomponent Cartdata={e}/>
-                  })
-                }
+                {data.map((e)=>{
+                return <Cartcomponent Cartcomponent={e}/>
+                })}
               </div>
             </div>
           </section>
-        );
     }
 
-    
-}
-
-export default Carddata;
+export default Cartdata;

@@ -1,5 +1,6 @@
 //import { render } from "@testing-library/react";
 import React from 'react'
+import './Cartdata.css'
 
 function Cartcomponent(props) {
     console.log(props)

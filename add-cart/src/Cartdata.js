@@ -17,7 +17,7 @@ function Cartdata () {
           product:"sale",
           image:"https://m.media-amazon.com/images/I/71u3QxI3QvL._UY695_.jpg",
           productname:"Special Item",
-          rating:'&#9733;',
+          rating:`&#9733;`,
           offerprice:"$20.00",
           price:"$18.00",
           button:"Add To Cart"

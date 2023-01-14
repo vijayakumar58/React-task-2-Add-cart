@@ -12,12 +12,12 @@ function Cartcomponent(props) {
                 <div className="text-center">
                     <h5 className="fw-bolder">{props.Cartcomponent.productname}</h5>
                     <div className="d-flex justify-content-center small text-warning mb-2">
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                        <div className="bi-star-fill"></div>
-                                    </div>
+                        <span className="star">&#9733;</span>
+                        <span className="star">&#9733;</span>
+                        <span className="star">&#9733;</span>
+                        <span className="star">&#9733;</span>
+                        <span className="star">&#9733;</span>                
+                        </div>
                     <span className="text-muted text-decoration-line-through">{props.Cartcomponent.offerprice}</span> 
                     {props.Cartcomponent.price}
                 </div>

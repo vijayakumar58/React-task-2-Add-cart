@@ -5,6 +5,19 @@
 img{
     height: 250px;
 }
-.star{
-    font-size: 30px;
-}
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  .on {
+    color: gold;
+  }
+  .off {
+    color: #ccc;
+  }
+  .font{
+    margin: 0px 5px 0px 5px;
+  }

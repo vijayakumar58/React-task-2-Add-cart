@@ -1,29 +1,45 @@
 //import { render } from "@testing-library/react";
-import React from 'react'
+import { useState } from "react";
 import './Cartdata.css'
+
+const StarRating = () => {
+    const [rating, setRating] = useState(0);
+    return (
+      <div className="star-rating">
+        {[...Array(5)].map((star, index) => {
+          index += 1;
+          return (
+            <button
+              type="button"
+              key={index}
+              className={index <= rating ? "on" : "off"}
+              onClick={() => setRating(index)}
+            >
+              <span className="star">&#9733;</span>
+            </button>
+          );
+        })}
+      </div>
+    );
+  };
 
 function Cartcomponent(props) {
     console.log(props)
-   return<div key={props.Cartcomponent.id} className="col mb-5">
+   return<div key={props.Cart.id} className="col mb-5">
                 <div className="card h-100">
-                <div className="badge bg-dark text-white position-absolute" style={{top: '0.5 rem', right: '0.5rem'}}>{props.Cartcomponent.product}</div>
-            <img className="card-img-top" src={props.Cartcomponent.image} alt="..." />
+                <div className="badge bg-dark text-white position-absolute" style={{top: '0.5 rem', right: '0.5rem'}}>{props.Cart.product}</div>
+            <img className="card-img-top" src={props.Cart.image} alt="..." />
              <div className="card-body p-4">
                 <div className="text-center">
-                    <h5 className="fw-bolder">{props.Cartcomponent.productname}</h5>
-                    <div className="d-flex justify-content-center small text-warning mb-2">
-                        <span className="star">&#9733;</span>
-                        <span className="star">&#9733;</span>
-                        <span className="star">&#9733;</span>
-                        <span className="star">&#9733;</span>
-                        <span className="star">&#9733;</span>                
-                        </div>
-                    <span className="text-muted text-decoration-line-through">{props.Cartcomponent.offerprice}</span> 
-                    {props.Cartcomponent.price}
+                    <h5 className="fw-bolder">{props.Cart.productname}</h5>
+                    <StarRating/>    
+                    <span className="text-muted text-decoration-line-through">{props.Cart.offerprice}</span> 
+                    {props.Cart.price}
                 </div>
             </div>
            <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">{props.Cartcomponent.button}</a></div>
+           {/* <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={()=>{handleAddToCart(props)}}>Add to cart</a></div> */}
+           <button disabled= {props.cartitems.some(obj => obj.id === props.cart.id)} onClick={ () => props.handleAddToCart(props.cart.id)} class="btn btn-primary">Add to Card</button>
             </div>
         </div>
     </div>

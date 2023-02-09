@@ -38,11 +38,13 @@ function Cartcomponent(props) {
                 </div>
             </div>
            <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-           {/* <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={()=>{handleAddToCart(props)}}>Add to cart</a></div> */}
-           <button disabled= {props.cartitems.some(obj => obj.id === props.cart.id)} onClick={ () => props.handleAddToCart(props.cart.id)} class="btn btn-primary">Add to Card</button>
+           <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={()=>{handleAddToCart(props)}}>Add to cart</a></div>
+           {/* <button disabled= {props.cartitems.some(obj => obj.id === props.cart.id)} onClick={ () => props.handleAddToCart(props.cart.id)} class="btn btn-primary">Add to Card</button> */}
             </div>
         </div>
     </div>
-            
+
 }
 export default Cartcomponent
+
+

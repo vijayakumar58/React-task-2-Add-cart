@@ -25,7 +25,7 @@ function App() {
                                 Cart
                                 <span className="badge bg-dark text-white ms-1 rounded-pill">{0}</span>
                                 <FontAwesomeIcon className='font' icon={faChevronCircleDown} />
-                                {/* <CartItems></CartItems> */}
+                                <CartItems></CartItems>
                             </button>
                         </form>
                     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Cartcomponent from './Cartcomponent';
 import './Cartdata.css'
 
@@ -63,29 +64,13 @@ function Cartdata () {
          }
     ]
 
-    const [cartitems, setCartItem] = useState([]);
-    const [total, setTotal] = useState(0);
     
-    let handleAddToCart = (id) =>{
-      const productIndex = data.findIndex(obj => obj.id === id)
-      const product = data[productIndex]
-    
-      setCartItem([...cartitems,product])
-      setTotal(total + product.price)
-    };
    
-  let handleRemoveCart = (id) => {
-    const cartItemIndex = cartitems.findIndex(obj => obj.id === id);
-    setTotal(total - cartitems[cartItemIndex].price);
-    cartitems.splice(cartItemIndex, 1)
-    setCartItem([...cartitems]);
-  }
-
         return<section className="py-5">
             <div className="container px-4 px-lg-5 mt-5" id="cartcontainer">
               <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 {data.map((e)=>{
-                return <Cartcomponent Cart={e}  handleAddToCart={handleAddToCart}/>
+                return <Cartcomponent Cart={e} />
                 })}
               </div>
             </div>
